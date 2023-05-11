@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .keyword {
+        display: inline-block;
+        background: rgb(250 255 0);
+        font-weight: 600;
+        border: 1px solid black;
+        padding: 2px 4px;
+      }
+      .search-bar {
+        width: 470px;
+        font-size: 15px;
+        border: 1px solid #3b90d1;
+        border-radius: 5px;
+        box-shadow: 0 0 5px #57baff;
+        padding: 10px;
+      }
+      .search-bar :focus-visible {
+        outline: red auto 1px;
+      }
+      .btn-reset {
+        background: green;
+        border: none;
+        color: #ffff;
+        border-radius: 5px;
+        font-size: 18px;
+        padding: 8px 10px;
+      }
+      .btn-submit {
+        background: #d51a1a;
+        border: none;
+        color: #ffff;
+        border-radius: 5px;
+        font-size: 18px;
+        padding: 8px 10px;
+      }
+      .suggestion {
+        border: 1px solid #cbc5c5;
+        border-radius: 5px;
+        padding: 5px 10px;
+        margin-bottom: 5px;
+      }
+      .search-options {
+        width: 600px;
+        padding: 10px 0;
+      }
+      .search-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="search-container">
+      <div>
+        <input
+          type="text"
+          name="search"
+          id="search"
+          class="search-bar"
+          onkeyup="findWords(event)"
+        />
+        <button class="btn-reset" onclick="submit()">Search</button>
+        <button class="btn-submit" onclick="reset()">Reset</button>
+        <div class="search-options" id="search-options"></div>
+      </div>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
